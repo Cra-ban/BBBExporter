@@ -61,5 +61,7 @@ f.close()
 print("HTML-file has been saved in the current directory as "+ outputFilename+".html")
 
 # save as pdf
-pdfkit.from_string(svgDataOut, (outputFilename+".pdf"))
+options = {'orientation': 'Landscape'}
+
+pdfkit.from_string(svgDataOut, (outputFilename+".pdf"), options=options)
 print("PDF has been saved in the current directory as "+ outputFilename+".pdf")
